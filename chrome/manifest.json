@@ -1,0 +1,27 @@
+{
+    "name": "Account VIP™",
+    "description": "Account VIP Beta Version:D",
+    "version": "1.0",
+    "permissions": [
+        "cookies", "tabs", "*://*/*", "tabs", "http://localhost:5000/", "http://accountvip.cf/"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "128": "images/icon_128_rounded.png",
+            "16": "images/icon_16_rounded.png",
+            "48": "images/icon_48_rounded.png"
+        },
+        "default_title": "Account VIP",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "images/icon_128_rounded.png",
+        "16": "images/icon_16_rounded.png",
+        "48": "images/icon_48_rounded.png"
+    },
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "js": ["js/content.js"]
+    }],
+    "manifest_version": 2
+}
